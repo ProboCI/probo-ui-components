@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import styles from './button.css';
+import './button.scss';
 
 /**
- * Button is described here.
+ * Button styles and markup options.
  */
 class Button extends Component {
   static propTypes = {
@@ -18,17 +18,17 @@ class Button extends Component {
       'isLarge',
     ]),
     color: PropTypes.oneOf([
-      'isPrimary',
-      'isInfo',
-      'isSuccess',
-      'isWarning',
-      'isDanger',
-      'isLink',
-      'isWhite',
-      'isLight',
-      'isDark',
-      'isBlack',
-      'isLink',
+      'primary',
+      'info',
+      'success',
+      'warning',
+      'danger',
+      'link',
+      'white',
+      'light',
+      'dark',
+      'black',
+      'link',
     ]),
     buttonStyle: PropTypes.oneOf([
       'isOutlined',
@@ -53,12 +53,12 @@ class Button extends Component {
   createClassName() {
     return [
       'extra-class',
-      styles.button,
-      styles[this.props.size],
-      styles[this.props.color],
-      styles[this.props.buttonStyle],
-      styles[this.props.state],
-      this.props.delete ? styles.delete : '',
+      'button',
+      this.props.size,
+      this.props.color ? 'button--' + this.props.color : '',
+      this.props.buttonStyle,
+      this.props.state,
+      this.props.delete ? 'delete' : '',
       this.props.className,
     ].join(' ').trim();
   }
@@ -72,8 +72,8 @@ class Button extends Component {
   renderLeftIcon() {
     return (
       <span>
-        <span className={[styles.icon, styles[this.createIconSize()]].join(' ')}>
-          <i className={[styles.fa, this.props.icon].join(' ')} />
+        <span className={['icon', this.createIconSize()].join(' ')}>
+          <i className={['fa', this.props.icon].join(' ')} />
         </span>
         <span style={{ lineHeight: this.props.size === 'isLarge' ? '32px' : 'auto' }}>
           {this.props.children}
@@ -88,8 +88,8 @@ class Button extends Component {
         <span style={{ lineHeight: this.props.size === 'isLarge' ? '32px' : 'auto' }}>
           {this.props.children}
         </span>
-        <span className={[styles.icon, styles[this.createIconSize()]].join(' ')}>
-          <i className={[styles.fa, this.props.icon].join(' ')} />
+        <span className={['icon', this.createIconSize()].join(' ')}>
+          <i className={['fa', this.props.icon].join(' ')} />
         </span>
       </span>
     );
@@ -108,7 +108,6 @@ class Button extends Component {
   }
 
   render() {
-    console.log(styles)
     return (
       <button style={this.props.style} className={this.createClassName()}>
         {this.props.icon ? this.renderIcon() : this.renderBody()}

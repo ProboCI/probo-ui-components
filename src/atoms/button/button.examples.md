@@ -7,16 +7,16 @@
 ```example
   <div className="example">
     <Button>Button</Button>
-    <Button color="isWhite">White</Button>
-    <Button color="isLight">Light</Button>
-    <Button color="isDark">Dark</Button>
-    <Button color="isBlack">Black</Button>
-    <Button color="isLink">Link</Button>
-    <Button color="isPrimary">Primary</Button>
-    <Button color="isInfo">Info</Button>
-    <Button color="isSuccess">Success</Button>
-    <Button color="isWarning">Warning</Button>
-    <Button color="isDanger">Danger</Button>
+    <Button color="white">White</Button>
+    <Button color="light">Light</Button>
+    <Button color="dark">Dark</Button>
+    <Button color="black">Black</Button>
+    <Button color="link">Link</Button>
+    <Button color="primary">Primary</Button>
+    <Button color="info">Info</Button>
+    <Button color="success">Success</Button>
+    <Button color="warning">Warning</Button>
+    <Button color="danger">Danger</Button>
   </div>
 ```
 
@@ -38,10 +38,10 @@
 ```example
   <div className="example">
     <Button buttonStyle="isOutlined">Outlined</Button>
-    <Button buttonStyle="isOutlined" color="isPrimary">Outlined</Button>
-    <Button buttonStyle="isOutlined" color="isInfo">Outlined</Button>
-    <Button buttonStyle="isOutlined" color="isSuccess">Outlined</Button>
-    <Button buttonStyle="isOutlined" color="isDanger">Outlined</Button>
+    <Button buttonStyle="isOutlined" color="primary">Outlined</Button>
+    <Button buttonStyle="isOutlined" color="info">Outlined</Button>
+    <Button buttonStyle="isOutlined" color="success">Outlined</Button>
+    <Button buttonStyle="isOutlined" color="danger">Outlined</Button>
   </div>
 ```
 
@@ -49,11 +49,11 @@
 
 ```example
   <div className="example">
-    <Button buttonStyle="isInverted">Inveted</Button>
-    <Button buttonStyle="isInverted" color="isPrimary">Inveted</Button>
-    <Button buttonStyle="isInverted" color="isInfo">Inveted</Button>
-    <Button buttonStyle="isInverted" color="isSuccess">Inveted</Button>
-    <Button buttonStyle="isInverted" color="isDanger">Inveted</Button>
+    <Button buttonStyle="isInverted">Inverted</Button>
+    <Button buttonStyle="isInverted" color="primary">Inverted</Button>
+    <Button buttonStyle="isInverted" color="info">Inverted</Button>
+    <Button buttonStyle="isInverted" color="success">Inverted</Button>
+    <Button buttonStyle="isInverted" color="danger">Inverted</Button>
   </div>
 ```
 
@@ -64,10 +64,10 @@
 ```example
   <div className="example">
     <Button state="isLoading">Loading</Button>
-    <Button state="isLoading" color="isPrimary">Loading</Button>
-    <Button state="isLoading" color="isInfo">Loading</Button>
-    <Button state="isLoading" color="isSuccess">Loading</Button>
-    <Button state="isLoading" color="isDanger">Loading</Button>
+    <Button state="isLoading" color="primary">Loading</Button>
+    <Button state="isLoading" color="info">Loading</Button>
+    <Button state="isLoading" color="success">Loading</Button>
+    <Button state="isLoading" color="danger">Loading</Button>
   </div>
 ```
 
@@ -76,10 +76,10 @@
 ```example
   <div className="example">
     <Button state="isActive">Active</Button>
-    <Button state="isActive" color="isPrimary">Active</Button>
-    <Button state="isActive" color="isInfo">Active</Button>
-    <Button state="isActive" color="isSuccess">Active</Button>
-    <Button state="isActive" color="isDanger">Active</Button>
+    <Button state="isActive" color="primary">Active</Button>
+    <Button state="isActive" color="info">Active</Button>
+    <Button state="isActive" color="success">Active</Button>
+    <Button state="isActive" color="danger">Active</Button>
   </div>
 ```
 
@@ -88,10 +88,10 @@
 ```example
   <div className="example">
     <Button state="isDisabled">Disabled</Button>
-    <Button state="isDisabled" color="isPrimary">Disabled</Button>
-    <Button state="isDisabled" color="isInfo">Disabled</Button>
-    <Button state="isDisabled" color="isSuccess">Disabled</Button>
-    <Button state="isDisabled" color="isDanger">Disabled</Button>
+    <Button state="isDisabled" color="primary">Disabled</Button>
+    <Button state="isDisabled" color="info">Disabled</Button>
+    <Button state="isDisabled" color="success">Disabled</Button>
+    <Button state="isDisabled" color="danger">Disabled</Button>
   </div>
 ```
 
@@ -102,9 +102,9 @@ Using Font Awesome icons.
 ```example
   <div className="example">
     <Button icon="fa fa-github">GitHub</Button>
-    <Button icon="fa fa-twitter" color="isPrimary">Twitter</Button>
-    <Button icon="fa fa-check" color="isSuccess">Save</Button>
-    <Button icon="fa fa-times" color="isDanger" isIconRight>Delete</Button>
+    <Button icon="fa fa-twitter" color="primary">Twitter</Button>
+    <Button icon="fa fa-check" color="success">Save</Button>
+    <Button icon="fa fa-times" color="danger" isIconRight>Delete</Button>
   </div>
 ```
 
@@ -112,8 +112,8 @@ Using Font Awesome icons.
 
 ```example
   <Group>
-    <Button color="isPrimary">Save changes</Button>
+    <Button color="primary">Save changes</Button>
     <Button>Cancel</Button>
-    <Button color="isDanger">Delete post</Button>       
+    <Button color="danger">Delete post</Button>
   </Group>
 ```

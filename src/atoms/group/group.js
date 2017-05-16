@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
-import styles from './group.css';
+import styles from './group.scss';
 
-export default class Group extends Component {
+class Group extends Component {
   static propTypes = {
     className: PropTypes.string,
     style: PropTypes.object,
@@ -49,3 +49,5 @@ export default class Group extends Component {
     );
   }
 }
+
+export default Group;

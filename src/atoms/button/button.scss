@@ -1,0 +1,36 @@
+$blue: blue;
+
+.button {
+  background-color: gray;
+  border: none;
+  color: white;
+
+  &.button--primary {
+    background-color: $blue;
+  }
+
+  &.button--success {
+    background-color: green;
+  }
+
+  &.button--warning {
+    background-color: orange;
+  }
+
+  &.button--info {
+    background-color: skyblue;
+  }
+
+  &.button--danger {
+    background-color: red;
+  }
+
+  &.button--black {
+    background-color: black;
+  }
+
+  &.button--light {
+    background-color: #f7f7f7;
+    color: black;
+  }
+}
