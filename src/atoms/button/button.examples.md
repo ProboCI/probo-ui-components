@@ -24,10 +24,10 @@
 
 ```example
   <div className="example">
-    <Button size="isSmall">Small</Button>
+    <Button size="small">Small</Button>
     <Button>Normal</Button>
-    <Button size="isMedium">Medium</Button>
-    <Button size="isLarge">Large</Button>
+    <Button size="medium">Medium</Button>
+    <Button size="large">Large</Button>
   </div>
 ```
 
@@ -49,11 +49,11 @@
 
 ```example
   <div className="example">
-    <Button buttonStyle="isInverted">Inverted</Button>
-    <Button buttonStyle="isInverted" color="primary">Inverted</Button>
-    <Button buttonStyle="isInverted" color="info">Inverted</Button>
-    <Button buttonStyle="isInverted" color="success">Inverted</Button>
-    <Button buttonStyle="isInverted" color="danger">Inverted</Button>
+    <Button buttonStyle="inverted">Inverted</Button>
+    <Button buttonStyle="inverted" color="primary">Inverted</Button>
+    <Button buttonStyle="inverted" color="info">Inverted</Button>
+    <Button buttonStyle="inverted" color="success">Inverted</Button>
+    <Button buttonStyle="inverted" color="danger">Inverted</Button>
   </div>
 ```
 

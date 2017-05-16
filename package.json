@@ -26,6 +26,7 @@
     "extract-text-webpack-plugin": "^2.1.0",
     "font-awesome": "^4.7.0",
     "node-sass": "^4.5.2",
+    "postcss-font-magician": "^1.6.1",
     "postcss-loader": "^2.0.5",
     "postcss-responsive-type": "^0.5.1",
     "prop-types": "^15.5.10",

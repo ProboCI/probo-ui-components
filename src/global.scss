@@ -8,6 +8,8 @@ html {
   upper-font-range: 1280px;
 }
 
-.button {
-  cursor: pointer;
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: $body-text-font-family;
 }

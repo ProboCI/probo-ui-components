@@ -13,9 +13,9 @@ class Button extends Component {
     type: PropTypes.string,
     style: PropTypes.object,
     size: PropTypes.oneOf([
-      'isSmall',
-      'isMedium',
-      'isLarge',
+      'small',
+      'medium',
+      'large',
     ]),
     color: PropTypes.oneOf([
       'primary',
@@ -32,7 +32,7 @@ class Button extends Component {
     ]),
     buttonStyle: PropTypes.oneOf([
       'isOutlined',
-      'isInverted',
+      'inverted',
     ]),
     state: PropTypes.oneOf([
       'isLoading',
@@ -54,9 +54,9 @@ class Button extends Component {
     return [
       'extra-class',
       'button',
-      this.props.size,
+      this.props.size ? 'button--' + this.props.size : '',
       this.props.color ? 'button--' + this.props.color : '',
-      this.props.buttonStyle,
+      this.props.buttonStyle ? 'button--' + this.props.buttonStyle : '',
       this.props.state,
       this.props.delete ? 'delete' : '',
       this.props.className,
@@ -64,8 +64,8 @@ class Button extends Component {
   }
 
   createIconSize() {
-    if (this.props.size === 'isLarge') return 'isMedium';
-    if (this.props.size === 'isSmall') return 'isSmall';
+    if (this.props.size === 'large') return 'medium';
+    if (this.props.size === 'small') return 'small';
     return '';
   }
 
@@ -75,7 +75,7 @@ class Button extends Component {
         <span className={['icon', this.createIconSize()].join(' ')}>
           <i className={['fa', this.props.icon].join(' ')} />
         </span>
-        <span style={{ lineHeight: this.props.size === 'isLarge' ? '32px' : 'auto' }}>
+        <span style={{ lineHeight: this.props.size === 'large' ? '32px' : 'auto' }}>
           {this.props.children}
         </span>
       </span>
@@ -85,7 +85,7 @@ class Button extends Component {
   renderRightIcon() {
     return (
       <span>
-        <span style={{ lineHeight: this.props.size === 'isLarge' ? '32px' : 'auto' }}>
+        <span style={{ lineHeight: this.props.size === 'large' ? '32px' : 'auto' }}>
           {this.props.children}
         </span>
         <span className={['icon', this.createIconSize()].join(' ')}>

@@ -39,6 +39,17 @@ module.exports = {
                   plugins: [
                     require('postcss-autoreset'),
                     require('postcss-responsive-type'),
+                    require('postcss-font-magician')({
+                      variants: {
+                        'Open Sans': {
+                          '400': ['woff'],
+                          '400italic': ['woff'],
+                          '600': ['woff'],
+                          '700': ['woff'],
+                        }
+                      },
+                      foundries: ['google']
+                    }),
                     require('autoprefixer')
                   ]
                 }
