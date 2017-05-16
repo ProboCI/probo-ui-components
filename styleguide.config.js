@@ -1,5 +1,6 @@
 const path = require('path');
 const docgen = require('react-docgen');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   title: 'Probo.CI Styleguide',
@@ -17,13 +18,19 @@ module.exports = {
           test: [/\.css$/, /\.scss$/],
           include: path.join(__dirname, 'src'),
           exclude: /node_modules/,
-          loaders: [
-            'style-loader?sourceMap',
-            'css-loader?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]'
-          ]
+          loader: ['css-hot-loader'].concat(ExtractTextPlugin.extract({
+            fallback: 'css-loader',
+            use: 'css-loader!sass-loader'
+          }))
         }
       ]
-    }
+    },
+    plugins: [
+      new ExtractTextPlugin({
+        filename: 'build/[name].css?[hash]-[chunkhash]-[contenthash]-[name]',
+        allChunks: true
+      }),
+    ]
   },
   sections: [
     { name: 'Atoms', components: 'src/atoms/**/*.js' },
