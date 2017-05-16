@@ -1,0 +1,13 @@
+@import 'variables';
+
+html {
+  font-size: responsive;
+  min-font-size: 12px;
+  max-font-size: 26px;
+  lower-font-range: 420px;
+  upper-font-range: 1280px;
+}
+
+.button {
+  cursor: pointer;
+}

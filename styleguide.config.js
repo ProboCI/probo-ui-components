@@ -17,10 +17,33 @@ module.exports = {
         {
           test: [/\.css$/, /\.scss$/],
           include: path.join(__dirname, 'src'),
-          exclude: /node_modules/,
           loader: ['css-hot-loader'].concat(ExtractTextPlugin.extract({
             fallback: 'css-loader',
-            use: 'css-loader!sass-loader'
+            use: [
+              {
+                loader: 'css-loader',
+                options: {
+                  sourceMaps: true
+                }
+              },
+              {
+                loader: 'sass-loader',
+                options: {
+                  sourceMaps: true
+                }
+              },
+              {
+                loader: 'postcss-loader',
+                options: {
+                  sourceMaps: true,
+                  plugins: [
+                    require('postcss-autoreset'),
+                    require('postcss-responsive-type'),
+                    require('autoprefixer')
+                  ]
+                }
+              }
+            ]
           }))
         }
       ]
